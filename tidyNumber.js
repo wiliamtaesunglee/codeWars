@@ -5,21 +5,20 @@ function tidyNumber(n) {
     .split("")
     .map(elem => parseInt(elem));
   let testArr = arr.length;
-
-  let i = 0;
-  while (i < testArr) {
-    let teste = arr[i] < arr[i + 1] ? true : false;
-    console.log(teste);
-    if (i > testArr);
-    {
-      break;
-    }
+  let validTest = [];
+  for (i = 0; i < testArr - 1; i++) {
+    arr[i] <= arr[i + 1] ? validTest.push("true") : false;
   }
-  i++;
+
+  if (validTest.length + 1 === testArr) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
 
 // tidyNumber(12);
-//   true
+//   true;
 // tidyNumber(102);
 // //  false
 // tidyNumber(9672);
