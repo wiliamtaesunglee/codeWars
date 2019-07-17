@@ -1,12 +1,12 @@
-// function minValue(values){
-//     //your code here
-//     let newValues = values.toString().split(',').sort()
-//     var count = {};
-//     newValues.forEach(function(s) {
-//         count[s] ? count[s]++ : (count[s] = 1);
-//       });
-//       return (parseInt(Object.keys(count).join('')))
-//   }
+function minValue(values){
+    //your code here
+    let newValues = values.toString().split(',').sort()
+    var count = {};
+    newValues.forEach(function(s) {
+        count[s] ? count[s]++ : (count[s] = 1);
+      });
+      return (parseInt(Object.keys(count).join('')))
+  }
 
   minValue([1, 3, 1])
 //   13
