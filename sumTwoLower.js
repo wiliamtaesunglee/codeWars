@@ -1,19 +1,19 @@
-function sumTwoSmallestNumbers(numbers) {  
-    //Code here
+// function sumTwoSmallestNumbers(numbers) {  
+//     //Code here
 
-    let num = numbers.map(elem => {
-        if (elem >= 0) {
-            return elem
-        }
-    });
+//     let num = numbers.map(elem => {
+//         if (elem >= 0) {
+//             return elem
+//         }
+//     });
 
 
-    let minOne = Math.min(...num)
-    let minTwo = num.length > 1 ? Math.min.apply(null, num.filter( numb => numb != minOne)) : 0
-     return num.length > 0 ? minOne + minTwo : 0
-    }
+//     let minOne = Math.min(...num)
+//     let minTwo = num.length > 1 ? Math.min.apply(null, num.filter( numb => numb != minOne)) : 0
+//      return num.length > 0 ? minOne + minTwo : 0
+//     }
 
-  console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]) )
+  console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22, 5]) )
 //   13
   console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
 //   6
@@ -30,3 +30,4 @@ function sumTwoSmallestNumbers(numbers) {
     console.log([a,b])
     return a + b
   }
+
