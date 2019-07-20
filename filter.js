@@ -4,6 +4,7 @@ function gooseFilter(birds) {
   const birdsFilter = birds.filter(item => {
     return !geese.includes(item);
   });
+  return birdsFilter;
 }
 
 gooseFilter([
