@@ -5,21 +5,21 @@ function findOdd(A) {
     count[s] ? count[s]++ : (count[s] = 1);
   });
 
-  //   Object.keys(count).map(elem => {
-  //     if (count[elem] == 1) {
-  //       response = elem;
-  //     }
-  //     for (i = 1; i < count[elem]; i++) {
-  //       count[elem] % i === 0 ? true : (response = elem);
-  //     }
-  //   });
-
   Object.keys(count).map(elem => {
-    if (count[elem] % 2 !== 0) {
-      console.log(elem);
+    if (count[elem] == 1) {
+      response = elem;
+    }
+    for (i = 1; i < count[elem]; i++) {
+      count[elem] % i === 0 ? true : (response = elem);
     }
   });
-  //   console.log(Number(response))
+
+  //   Object.keys(count).map(elem => {
+  //     if (count[elem] % 2 !== 0) {
+  //       console.log(elem);
+  //     }
+  //   });
+  console.log(Number(response));
 }
 
 //   function doTest(a, n) {
