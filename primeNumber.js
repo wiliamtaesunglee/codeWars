@@ -1,41 +1,17 @@
-const { PerformanceObserver, performance } = require("perf_hooks");
-
 function isPrime(num) {
-  let validation = false;
-  if (num <= 1) return console.log(false);
-
-  let divisor = 2;
-
-  let primeFactors = [];
-
-  while (num > 1) {
-    if (num % divisor === 0) {
-      num = num / divisor;
-      primeFactors.push(divisor);
-    } else {
-      if (num ** (1 / 2) > divisor) {
-        validation = true;
-      }
-      divisor += 1;
-    }
-  }
-
-  let primeFactorsNoRepeat = [...new Set(primeFactors)];
-  var t0 = performance.now();
-  let teste = validation || primeFactors.length == primeFactorsNoRepeat.length;
-  var t1 = performance.now();
-  console.log(teste, t1 - t0);
-  // return teste;
+  let raiz = num ** (1 / 2);
+  for (let i = 2; i <= raiz; i++) if (num % i === 0) return false;
+  return num > 1;
 }
 
-// isPrime(0);
+isPrime(1001);
 // "0 is not prime");
 // "1 is not prime");
-// isPrime(2);
+// isPrime(73);
 // 2 is prime");
 // isPrime(73);
 // 73 is prime");
-isPrime(1111111111001);
+// isPrime(1001);
 // isPrime(81);
 // "75 is not prime");
 // isPrime(-1);
