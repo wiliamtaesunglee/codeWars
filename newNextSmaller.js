@@ -8,9 +8,8 @@ function nextSmaller(n) {
         let third = newN.substring(i, b).split('').sort((a, b) => a - b).join('')
         let arrayN = first + third
         // console.log(arrayN, third)
-        
-        if (Number(arrayN) < n) {
-            console.log(Number(arrayN))
+        let compare = Number(arrayN)
+        if (compare < n) {
             resposne = Number(arrayN)
             break
         }
