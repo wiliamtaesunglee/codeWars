@@ -4,7 +4,7 @@ function repeatStr (n, s) {
         response.push(s)
     }
 
-    console.log(response.join(''))
+    return (response.join(''))
   }
 
   repeatStr(6, "I") // "IIIIII"
